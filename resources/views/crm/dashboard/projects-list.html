@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        
+        <meta charset="utf-8" />
+        <title>Projects | My-CRM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />   
+
+		<link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css">
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />		
+        <link href="assets/libs/tui-chart/tui-chart.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-topbar="light">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="30">
+                                </span>
+                            </a>
+
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+						<div class="top-menu">
+							<a class="active" href="#" id="tm-button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-plus"></i></a>
+							<div class="d-flex" aria-labelledby="tm-button" id="tm-dropdown">
+								<a href="#"><i class="bx bx-list-ul"></i> List</a>
+								<a href="#"><i class="bx bx-chalkboard"></i> Board</a>
+								<a href="#"><i class="bx bx-grid-alt"></i> Box</a>
+								<a href="#"><i class="bx bx-add-to-queue"></i> Add View</a>
+							</div>
+						</div>
+                    </div>					
+					<div class="d-flex ms-auto">
+                        <!-- App Search-->
+                        <form class="app-search d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="bx bx-search-alt"></span>
+                            </div>
+                        </form>
+					</div>
+					<div class="d-flex">
+						<a href="#" class="btn-history"><i class="bx bx-history"></i></a>
+					</div>
+                </div>
+            </header>
+
+			<!-- Left Sidebar Start -->
+			<div class="vertical-menu">
+
+				<div data-simplebar class="h-100">
+
+					<!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled" id="side-menu">
+
+                            <li>
+                                <a href="index.html" class="waves-effect">
+                                    <i class="bx bx-receipt"></i>
+                                    <span key="t-dashbard">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-align-left"></i>
+                                    <span key="t-leads">Leads</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="clients.html" class="waves-effect">
+                                    <i class="bx bxs-bank"></i>
+                                    <span key="t-pmethods">Clients</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="invoices.html" class="waves-effect">
+                                    <i class="bx bx-file"></i>
+                                    <span key="t-invoice">Invoices</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-download"></i>
+                                    <span key="t-estimate">Estimate</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-credit-card"></i>
+                                    <span key="t-credits">Credit Note</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-wallet-alt"></i>
+                                    <span key="t-payments">Payments</span>
+                                </a>
+                            </li>
+
+                            <li class="mm-active">
+                                <a href="projects.html" class="waves-effect active">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-project">Project</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="tasks.html" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-tasks">Tasks</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-calender">Calender</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-wplan">Weekly Plans</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-journals">My Daily Journals</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="settings.html" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-settings">Settings</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+					<div class="social-links">
+						<div class="icons">
+							<a href="#" target="_blank"><img src="assets/images/facebook.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/twitter.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/github.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/email.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/youtube.png"></a>
+						</div>	
+					</div>
+
+				</div>
+			</div>
+			<!-- Left Sidebar End -->
+
+			<!-- Start main Content here -->
+			<div class="main-content">
+				<!-- Start page-Content here -->
+				<div class="left-content single">
+					<div class="page-sticky-header scroll-nav">
+						<div class="title">
+							<i class="bx bxs-folder"></i>
+							<div><h5 class="mb-0">Sprints and Backlogs</h5> <span class="small text-gray bold">4 Lists</span></div>
+						</div>
+						<div class="filters">
+							<div class="item"><a href="#"><i class="bx bx-filter"></i> Filter</a></div>
+							<div class="item active"><a href="#"><i class="bx bx-layer"></i> Group by: Status</a></div>
+							<div class="item"><a href="#"><i class="bx bx-git-merge"></i> Subtasks</a></div>
+							<div class="item"><a href="#"><i class="bx bx-user"></i> Me</a> <span class="dot"></span> <a href="#"><i class="bx bx-group"></i></a></div>
+							<div class="item"><a href="#"><i class="bx bx-show"></i> Show</a></div>
+							<div class="item"><a href="#"><i class="bx bx-dots-horizontal"></i></a></div>
+							<div class="item"><a href="#"><i class="bx bx-share-alt"></i> Share</a></div>
+						</div>
+					</div>
+					<div class="page-content h-100 mb-3" data-simplebar data-simplebar-auto-hide="false">
+
+						<div class="project-list">
+							<div class="accordion accordion-flush accordionFlushMain mb-3" id="accordionFlushMain">
+								<div class="accordion-item">
+									<h4 class="accordion-header card-title mb-0" id="flush-heading1">
+										<button class="accordion-button fw-medium sbtn text-gray me-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="true" aria-controls="flush-collapse1"><i class="bx bx-right-arrow-circle text-gray"></i></button>										
+										<span class="heading">Sprint 1 <i class="bx bx-info-circle text-gray small"></i><span class="text-gray small ms-2"> + New Task</span></span>
+										<button class="accordion-button fw-medium ebtn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="true" aria-controls="flush-collapse1"><span class="text-gray"></span></button>
+									</h4>
+									<div id="flush-collapse1" class="accordion-collapse collapse show" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushmain">
+										<div class="accordion-body pe-0">
+											
+											 <div class="accordion accordion-flush" id="accordionFlushsection">
+												<div class="accordion-item">
+													<h4 class="accordion-header card-title pb-0 pt-0 mb-0" id="flush-heading2">														
+														<button class="accordion-button fw-medium sbtn text-black me-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="true" aria-controls="flush-collapse2"><i class="bx bx-right-arrow-circle text-black"></i></button>									
+														
+														<button class="accordion-button fw-medium ebtn ms-auto" type="button" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"><i class="bx bxs-plus-circle text-gray me-0"></i></button>
+													</h4>
+													<div class="accordion-body pt-0 pb-0">
+														
+														<div class="table-rep-plugin details">
+															<div class="table-responsive mb-0" data-pattern="priority-columns">
+																<table class="table table-borderless">
+																	<thead class="text-nowrap">
+																	<tr>														
+																		<th data-priority="1" class="h-title"><span class="tbl-title bg-dark">PRODUCTON <i class="bx bx-check-circle small"></i></span><span class="text-gray small ms-2"> 1 Task</span></th>
+																		<th  class="text-center"data-priority="2">Assignee</th>
+																		<th class="text-center" data-priority="3">Due Date</th>
+																		<th class="text-center" data-priority="5">Priority</th>
+																		<th class="text-center" data-priority="6">Time Estimate</th>
+																		<th  class="text-center"data-priority="7">Front End Scrum PTS</th>
+																		<th class="text-center" data-priority="8">Back End Scrum PTS</th>
+																		<th class="text-center" data-priority="9">Total PTS</th>
+																		<th class="text-center" data-priority="10">Confidence Le...</th>
+																		<th data-priority="4" class="pe-4">Progress</th>
+																	</tr>
+																	</thead>
+																	<tbody id="flush-collapse2" class="accordion-collapse collapse show" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushsection">
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-dark"></i> Refine UI</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-success">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-info"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-info text-white"><span class="frontpts">2</span></td>
+																		<td class="text-center bg-primary text-white"><span class="backpts">1</span></td>
+																		<td class="text-center"><span class="totalpts">2</span></td>
+																		<td class="text-center bg-success text-white"><span class="confidence">On track</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 100%
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="10"><span class="text-gray cursor-pointer" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"> + New Task</span></td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+						
+														</div>
+													</div>
+												</div>
+												<div class="accordion-item">
+													<h4 class="accordion-header card-title pb-0 pt-0 mb-0" id="flush-heading3">														
+														<button class="accordion-button fw-medium sbtn text-black me-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="true" aria-controls="flush-collapse3"><i class="bx bx-right-arrow-circle text-pink"></i></button>									
+														
+														<button class="accordion-button fw-medium ebtn ms-auto" type="button" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"><i class="bx bxs-plus-circle text-gray me-0"></i></button>
+													</h4>
+													<div class="accordion-body pt-0 pb-0">
+														
+														<div class="table-rep-plugin details">
+															<div class="table-responsive mb-0" data-pattern="priority-columns">
+																<table class="table table-borderless">
+																	<thead class="text-nowrap">
+																	<tr>														
+																		<th data-priority="1" class="h-title"><span class="tbl-title bg-pink">STAGED</span><span class="text-gray small ms-2"> 1 Task</span></th>
+																		<th  class="text-center"data-priority="2">Assignee</th>
+																		<th class="text-center" data-priority="3">Due Date</th>
+																		<th class="text-center" data-priority="5">Priority</th>
+																		<th class="text-center" data-priority="6">Time Estimate</th>
+																		<th  class="text-center"data-priority="7">Front End Scrum PTS</th>
+																		<th class="text-center" data-priority="8">Back End Scrum PTS</th>
+																		<th class="text-center" data-priority="9">Total PTS</th>
+																		<th class="text-center" data-priority="10">Confidence Le...</th>
+																		<th data-priority="4" class="pe-4">Progress</th>
+																	</tr>
+																	</thead>
+																	<tbody id="flush-collapse3" class="accordion-collapse collapse show" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushsection">
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-pink"></i> Improve that feature</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-danger">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-info"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-primary text-white"><span class="frontpts">3</span></td>
+																		<td class="text-center bg-primary text-white"><span class="backpts">3</span></td>
+																		<td class="text-center"><span class="totalpts">2</span></td>
+																		<td class="text-center bg-success text-white"><span class="confidence">On track</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 0%
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="10"><span class="text-gray cursor-pointer" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"> + New Task</span></td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+						
+														</div>
+													</div>
+												</div>
+												<div class="accordion-item">
+													<h4 class="accordion-header card-title pb-0 pt-0 mb-0" id="flush-heading4">														
+														<button class="accordion-button fw-medium sbtn text-black me-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="true" aria-controls="flush-collapse4"><i class="bx bx-right-arrow-circle text-warning"></i></button>									
+														
+														<button class="accordion-button fw-medium ebtn ms-auto" type="button" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"><i class="bx bxs-plus-circle text-gray me-0"></i></button>
+													</h4>
+													<div class="accordion-body pt-0 pb-0">
+														
+														<div class="table-rep-plugin details">
+															<div class="table-responsive mb-0" data-pattern="priority-columns">
+																<table class="table table-borderless">
+																	<thead class="text-nowrap">
+																	<tr>														
+																		<th data-priority="1" class="h-title"><span class="tbl-title bg-warning">REVIEW</span><span class="text-gray small ms-2"> 3 Task</span></th>
+																		<th  class="text-center"data-priority="2">Assignee</th>
+																		<th class="text-center" data-priority="3">Due Date</th>
+																		<th class="text-center" data-priority="5">Priority</th>
+																		<th class="text-center" data-priority="6">Time Estimate</th>
+																		<th  class="text-center"data-priority="7">Front End Scrum PTS</th>
+																		<th class="text-center" data-priority="8">Back End Scrum PTS</th>
+																		<th class="text-center" data-priority="9">Total PTS</th>
+																		<th class="text-center" data-priority="10">Confidence Le...</th>
+																		<th data-priority="4" class="pe-4">Progress</th>
+																	</tr>
+																	</thead>
+																	<tbody id="flush-collapse4" class="accordion-collapse collapse show" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushsection">
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-warning"></i> Quality check the build</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-danger">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-warning"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-info text-white"><span class="frontpts">1</span></td>
+																		<td class="text-center bg-success text-white"><span class="backpts">4</span></td>
+																		<td class="text-center"><span class="totalpts">4</span></td>
+																		<td class="text-center bg-warning text-white"><span class="confidence">Might be La...</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 0%
+																		</td>
+																	</tr>
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-warning"></i> New signup page</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-danger">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-gray"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-success text-white"><span class="frontpts">2</span></td>
+																		<td class="text-center bg-primary text-white"><span class="backpts">5</span></td>
+																		<td class="text-center"><span class="totalpts">10</span></td>
+																		<td class="text-center bg-warning text-white"><span class="confidence">Might be La...</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 0%
+																		</td>
+																	</tr>
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-warning"></i> Set up data ware house</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-danger">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-warning"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-info text-white"><span class="frontpts">1</span></td>
+																		<td class="text-center bg-info text-white"><span class="backpts">1</span></td>
+																		<td class="text-center"><span class="totalpts">1</span></td>
+																		<td class="text-center bg-success text-white"><span class="confidence">On track</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 0%
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="10"><span class="text-gray cursor-pointer" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"> + New Task</span></td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+						
+														</div>
+													</div>
+												</div>
+											</div>  
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion accordion-flush accordionFlushMain mb-4" id="accordionFlushMain1">
+								<div class="accordion-item">
+									<h4 class="accordion-header card-title mb-0" id="flush-heading1">
+										<button class="accordion-button fw-medium sbtn text-gray me-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="true" aria-controls="flush-collapse5"><i class="bx bx-right-arrow-circle text-gray"></i></button>										
+										<span class="heading">Sprint 2 <i class="bx bx-info-circle text-gray small"></i><span class="text-gray small ms-2"> + New Task</span></span>
+										<button class="accordion-button fw-medium ebtn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="true" aria-controls="flush-collapse5"><span class="text-gray"></span></button>
+									</h4>
+									<div id="flush-collapse5" class="accordion-collapse collapse show" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushmain">
+										<div class="accordion-body pe-0">
+											
+											 <div class="accordion accordion-flush" id="accordionFlushsection">
+												<div class="accordion-item">
+													<h4 class="accordion-header card-title pb-0 pt-0 mb-0" id="flush-heading6">														
+														<button class="accordion-button fw-medium sbtn text-black me-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="true" aria-controls="flush-collapse6"><i class="bx bx-right-arrow-circle text-warning"></i></button>									
+														
+														<button class="accordion-button fw-medium ebtn ms-auto" type="button" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"><i class="bx bxs-plus-circle text-gray me-0"></i></button>
+													</h4>
+													<div class="accordion-body pt-0 pb-0">
+														
+														<div class="table-rep-plugin details">
+															<div class="table-responsive mb-0" data-pattern="priority-columns">
+																<table class="table table-borderless">
+																	<thead class="text-nowrap">
+																	<tr>														
+																		<th data-priority="1" class="h-title"><span class="tbl-title bg-warning">REVIEW</span><span class="text-gray small ms-2"> 2 Task</span></th>
+																		<th  class="text-center"data-priority="2">Assignee</th>
+																		<th class="text-center" data-priority="3">Due Date</th>
+																		<th class="text-center" data-priority="5">Priority</th>
+																		<th class="text-center" data-priority="6">Time Estimate</th>
+																		<th  class="text-center"data-priority="7">Front End Scrum PTS</th>
+																		<th class="text-center" data-priority="8">Back End Scrum PTS</th>
+																		<th class="text-center" data-priority="9">Total PTS</th>
+																		<th class="text-center" data-priority="10">Confidence Le...</th>
+																		<th data-priority="4" class="pe-4">Progress</th>
+																	</tr>
+																	</thead>
+																	<tbody id="flush-collapse6" class="accordion-collapse collapse show" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushsection">
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-warning"></i> Quality check the build</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-danger">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-warning"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-info text-white"><span class="frontpts">1</span></td>
+																		<td class="text-center bg-success text-white"><span class="backpts">4</span></td>
+																		<td class="text-center"><span class="totalpts">4</span></td>
+																		<td class="text-center bg-warning text-white"><span class="confidence">Might be La...</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 0%
+																		</td>
+																	</tr>
+																	<tr class="bg-white">
+																		<td><span class="production"><i class="bx bx bxs-checkbox text-warning"></i> New signup page</span></td>
+																		<td class="text-center"><span class="assignee"><i class="bx bx-user-plus"></i></span></td>
+																		<td class="text-center"><span class="due text-danger">8/15/19</span></td>
+																		<td class="text-center"><span class="priority text-gray"><i class="bx bxs-flag-alt"></i></span></td>
+																		<td class="text-center"><span class="estimate"><i class="bx bx-hourglass"></i> 40h</span></td>
+																		<td class="text-center bg-success text-white"><span class="frontpts">2</span></td>
+																		<td class="text-center bg-primary text-white"><span class="backpts">5</span></td>
+																		<td class="text-center"><span class="totalpts">10</span></td>
+																		<td class="text-center bg-warning text-white"><span class="confidence">Might be La...</span></td>
+																		<td class="text-green">
+																			<div class="progress animated-progess">
+																				<div class="progress-bar bg-green" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																			</div> 0%
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="10"><span class="text-gray cursor-pointer" data-bs-toggle="modal" data-bs-target=".transaction-detailModal"> + New Task</span></td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+						
+														</div>
+													</div>
+												</div>
+											</div>  
+
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="extra-space"></div>
+
+					</div>
+					
+					<div class="row content-footer status-bar">
+						<div class="col-10">
+							<a href="#"><i class="bx bx-cog"></i></a>
+							<a href="#"><i class="bx bx-filter"></i></a>
+							<a href="#"><i class="bx bx-images"></i></a>
+							<a href="#"><i class="bx bx-list-ul"></i></a>
+						</div>
+						<div class="col-2 ms-0 text-end">
+							<a href="#"><i class="bx bx-rotate-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- End Page-content -->	
+
+				<!-- Modal -->
+				<div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-right modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="transaction-detailModalLabel">Details</h5>
+								<div class="nav-link ms-auto me-0 p-0">
+									<a href="#">Edit</a>
+									<a href="#"><i class="mdi mdi-dots-vertical"></i></a>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>									
+								</div>
+							</div>
+							<div class="modal-body">
+
+								<div class="model-content">
+
+									<!-- Tab panes -->
+									<div class="tab-content" id="tab-content">							
+									<div class="tab-pane active" id="details" role="tabpanel">
+										<div class="card pt-3">	
+											<div class="row">
+												<div class="task-title pe-4 ps-4">
+													<div class="icon">
+														<i class="mdi mdi-dock-bottom align-middle me-1"></i>
+													</div>
+													<div class="input-field">
+														<input type="search" class="form-control bold" value="Index page" placeholder="Task Name">
+														<span>in lijst <a href="#" class="underline">Backlog</a></span>
+													</div>
+												</div>
+												<div class="col-8 col-xxs-12">		
+													<div>
+														<div class="chat-conversation p-3">
+															<ul class="list-unstyled mb-0 h-100" data-simplebar data-simplebar-auto-hide="true">
+																<li>
+																	<div class="conversation-list">
+																		<div class="ctext-wrap">
+																			<div class="conversation-name">
+																				<span class="chat-name"><i class="bx bx-detail align-middle me-1"></i> Omschrijving</span>
+																				<span class="chat-tag">Bewerken</span>
+																			</div>
+																			<p>
+																				<span class="d-block">Index page like</span>
+																				<span class="chat-stag "><i class="bx bx-mail-send align-middle me-1"></i> Mews property management system | The hospitality ststem of the future</span>
+																			</p>
+																		</div>
+																		
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="p-3 pt-1 chat-input-section">													
+															<div class="row mb-2">
+																<div class="col">
+																	<span class="chat-activity"><i class="bx bx-list-ul align-middle me-1"></i> Activiteit</span>
+																</div>
+																<div class="col-auto">
+																	<span class="chat-activity-detail">Details weergeven</span>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-12">
+																	<div class="position-relative">
+																		<textarea class="form-control" rows="3" placeholder="Maak een opmerking..."></textarea>
+																		<div class="chat-textarea-links" id="tooltip-container">
+																			<div class="row">
+																				<div class="col-4">
+																					<span class="chat-tag">Bewaren</span>
+																				</div>
+																				<div class="col-8 text-end">
+																					<ul class="list-inline mb-0">
+																						<li class="list-inline-item"><a href="javascript: void(0);" title="Emoji"><i class="mdi mdi-emoticon-happy-outline"></i></a></li>
+																						<li class="list-inline-item"><a href="javascript: void(0);" title="Images"><i class="mdi mdi-file-image-outline"></i></a></li>
+																						<li class="list-inline-item"><a href="javascript: void(0);" title="Add Files"><i class="mdi mdi-file-document-outline"></i></a></li>																		
+																						<li class="list-inline-item"><a href="javascript: void(0);" title="Images"><i class="mdi mdi-dock-bottom"></i></a></li>
+																					</ul>																			
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-4 col-xxs-12">
+													<dl class="pt-4 p-2 userlist">
+														<dt>Voorgesteld <i class="bx bx-cog bx-spin float-right"></i></dt>
+														<dd><i class="bx bx-user"></i> Deelnemen</dd>
+														<dt>Toevoegen aan kaart</dt>														
+														<dd class="dropstart" style="cursor: pointer;">
+															<div data-bs-toggle="dropdown" aria-expanded="false"> <i class="bx bx-user"></i> Leden </div>
+															<div class="dropdown-menu p-0" style="">
+																<div class="p-2" style="min-width: 250px;">
+																	<h6 style="border-bottom:solid 1px #eff2f7 !important;" class="text-center pb-2 text-gray">Leden</h6>
+																	<div>
+																		<input datalist="browsers" type="search" placeholder="Leden Zoeken" class="form-control-sm mb-2" style="border-color: #dbdbdb; width: 100%;"></input>
+																		<datalist id="browsers">
+																		  <option value="Edge">
+																		  <option value="Firefox">
+																		  <option value="Chrome">
+																		  <option value="Opera">
+																		  <option value="Safari">
+																		</datalist>
+																		<p class="bold mb-2">Bordleden</p>
+																		<div class="d-flex align-items-center mb-2"><img src="assets/images/users/avatar-1.jpg" class="avatar-xs rounded-circle me-2" alt=""> Atieeq (atieeq)<i class="bx bx-check text-success ms-auto"></i></div>
+																		<div class="d-flex align-items-center mb-2"><img src="assets/images/users/avatar-1.jpg" class="avatar-xs rounded-circle me-2" alt=""> Hossain 15 (hossain 15)</div>
+																	</div>
+																	<div class="small pt-1 pb-1 mt-2 text-center" style="background: #eef0fc;">Toon andere Workspace-leden</div>
+																</div>
+															</div>
+														</dd>
+														<dd><i class="bx bx-purchase-tag-alt"></i> Labels</dd>
+														<dd><i class="bx bx-checkbox-checked"></i> Checklist</dd>
+														<dd><i class="bx bx-time"></i> Datums</dd>
+														<dd><i class="bx bx-paperclip"></i> Bijlage</dd>
+														<dt>Acties</dt>
+														<dd><i class="bx bx-right-arrow-alt"></i> Verplaats</dd>
+														<dd><i class="bx bx-copy-alt"></i> Kopieren</dd>
+														<dd><i class="bx bx-layout"></i> Sjabloon maken</dd>
+														<dd><i class="bx bx-show"></i> Volgen</dd>
+														<dd><i class="bx bx-box"></i> Archiveren</dd>
+														<dd><i class="bx bx-share-alt"></i> Delen</dd>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div> <!-- end slimscroll-menu-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end modal -->
+				
+				<footer class="footer">
+					<div class="container-fluid">
+						<div class="row">
+                            <div class="col-sm-6">
+                                Copywrite © <script>document.write(new Date().getFullYear())</script> Invoice Ninja.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    <!-- <img src="assets/images/footlg.png" alt="" height="15"> -->
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</footer>				
+
+				<!-- Loader -->
+				<div id="preloader">
+					<div id="status">
+						<div class="spinner-chase">
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>		
+
+        <!-- tui charts plugins -->
+        <script src="assets/libs/tui-chart/tui-chart-all.min.js"></script>
+
+        <!-- tui charts map -->
+        <script src="assets/libs/tui-chart/maps/usa.js"></script>
+
+        <!-- tui charts plugins -->
+        <script src="assets/js/pages/tui-charts.init.js"></script>
+		
+		<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+		<!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>   
+
+		<script>
+			$(window).resize(function() {
+				if ($(window).width() < 768) {
+					location.reload();
+				}
+			});
+
+			$(document).ready(function(){
+
+				$(".select-year .increase").click(function(){
+					$(".select-year input").val(parseInt($(".select-year input").val()) + 1);
+				})
+				$(".select-year .decrease").click(function(){
+					$(".select-year input").val(parseInt($(".select-year input").val()) - 1);
+				})
+
+				if ($(window).width() < 768) {
+					
+					$(".top-menu").addClass("dropdown");
+					$("#tm-dropdown").addClass("dropdown-menu");
+					$("#tm-dropdown").removeClass("d-flex");
+					
+					/**var menuobj = $("#top-menu-dasktop").html();
+					$("#top-menu-dasktop").remove();
+					$("#top-menu").prepend(menuobj);
+					var contentobj = $("#tab-content-dasktop").html();
+					$("#tab-content-dasktop").remove();
+					$("#tab-content").prepend(contentobj);**/
+
+				}
+			});
+
+		</script>
+
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

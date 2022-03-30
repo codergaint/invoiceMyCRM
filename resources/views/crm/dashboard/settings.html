@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        
+        <meta charset="utf-8" />
+        <title>Settings | My-CRM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />   
+
+		<link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css">
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />		
+        <link href="assets/libs/tui-chart/tui-chart.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-topbar="light">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="30">
+                                </span>
+                            </a>
+
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+						<ul class="nav menu nav-pills me-3" role="tablist" id="top-menu-dasktop">
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link active" data-bs-toggle="tab" href="#overview" role="tab" title="Overview" aria-selected="false">
+									<span class="">Projects</span> 
+								</a>
+							</li>
+						</ul>
+
+                        <!-- App Search-->
+                        <form class="app-search d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="bx bx-search-alt"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </header>
+
+			<!-- Left Sidebar Start -->
+			<div class="vertical-menu">
+
+				<div data-simplebar class="h-100">
+
+					<!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled" id="side-menu">
+
+                            <li>
+                                <a href="index.html" class="waves-effect">
+                                    <i class="bx bx-receipt"></i>
+                                    <span key="t-dashbard">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-align-left"></i>
+                                    <span key="t-leads">Leads</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="clients.html" class="waves-effect">
+                                    <i class="bx bxs-bank"></i>
+                                    <span key="t-pmethods">Clients</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="invoices.html" class="waves-effect">
+                                    <i class="bx bx-file"></i>
+                                    <span key="t-invoice">Invoices</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-download"></i>
+                                    <span key="t-estimate">Estimate</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-credit-card"></i>
+                                    <span key="t-credits">Credit Note</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-wallet-alt"></i>
+                                    <span key="t-payments">Payments</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-project">Project</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="tasks.html" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-tasks">Tasks</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-calender">Calender</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-wplan">Weekly Plans</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-journals">My Daily Journals</span>
+                                </a>
+                            </li>
+
+                            <li class="mm-active">
+                                <a href="settings.html" class="waves-effect active">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-settings">Settings</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+					<div class="social-links">
+						<div class="icons">
+							<a href="#" target="_blank"><img src="assets/images/facebook.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/twitter.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/github.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/email.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/youtube.png"></a>
+						</div>	
+					</div>
+
+				</div>
+			</div>
+			<!-- Left Sidebar End -->
+
+			<!-- Start main Content here -->
+			<div class="main-content">
+				<!-- Start page-Content here -->
+				<div class="left-content">
+					<div class="page-content h-100" id="scroll-block" data-simplebar data-simplebar-auto-hide="false">
+						<div class="tab-content" id="tab-content-dasktop">
+							<div class="tab-pane active" id="overview" role="tabpanel">
+								<div class="row" id="details-block">
+									<div class="col-lg-12">
+										<div class="card">
+											<div class="bg-primary bg-soft clients-data-header">
+												<div class="row">
+													<div class="col-6 col-xxs-12">
+														<div class="text-primary p-2 ps-4 title">
+															<h5 class="text-primary m-0">Customers</h5>
+														</div>
+													</div>
+													<div class="col-sm-6 col-xxs-12">	
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="row">
+													<div class="col-6 col-xxs-12 basic-settings">
+														<h6>Basic Settings</h6>
+														<ul>
+															<li><a href="#"><i class="mdi mdi-domain"></i> Company Details</a></li>
+															<li><a href="#"><i class="mdi mdi-account-outline"></i> User Details</a></li>
+															<li><a href="#"><i class="mdi mdi-web"></i> Localization</a></li>
+															<li><a href="#"><i class="mdi mdi-credit-card-outline"></i> Online Payments</a></li>
+															<li><a href="#"><i class="mdi mdi-percent-outline"></i> Tax Payments</a></li>
+															<li><a href="#"><i class="mdi mdi-cube-outline"></i> Product Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-timer-outline"></i> Task Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-file-image-outline"></i> Expense Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-source-branch"></i> Workflow Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-swap-vertical"></i> Import | EXport</a></li>
+															<li><a href="#"><i class="mdi mdi-desktop-classic"></i> Device Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-shield-account-outline"></i> Account Management</a></li>
+														</ul>
+													</div>
+													<div class="col-6 col-xxs-12 advance-settings">
+														<h6>Advance Settings</h6>
+														<ul>
+															<li><a href="#"><i class="mdi mdi-brush"></i> Invoice Design</a></li>
+															<li><a href="#"><i class="mdi mdi-format-text"></i> Custom Fields</a></li>
+															<li><a href="#"><i class="mdi mdi-format-list-numbered"></i> Generated Numbers</a></li>
+															<li><a href="#"><i class="mdi mdi-email-outline"></i> Email Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-weather-cloudy"></i> Client Portal</a></li>
+															<li><a href="#"><i class="mdi mdi-gesture-tap"></i> Templates & Reminders</a></li>
+															<li><a href="#"><i class="mdi mdi-shopping-outline"></i> Group Settings</a></li>
+															<li><a href="#"><i class="mdi mdi-group"></i> Subscriptions</a></li>
+															<li><a href="#"><i class="mdi mdi-account-multiple-outline"></i> User Management</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Page-content -->					
+
+				<!-- Start right Content here -->
+				<div class="right-content">					
+	
+					<!-- Nav tabs -->
+					<div class="scroll-nav">
+						<ul class="nav menu nav-pills" role="tablist" id="top-menu">
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link active" data-bs-toggle="tab" href="#details" role="tab" title="Details">
+									<span class="">Details</span> 
+								</a>
+							</li>
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link" data-bs-toggle="tab" href="#address" role="tab" title="Address">
+									<span class="">Address</span> 
+								</a>
+							</li>
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link" data-bs-toggle="tab" href="#logo" role="tab" title="Logo">
+									<span class="">Logo</span> 
+								</a>
+							</li>
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link" data-bs-toggle="tab" href="#default" role="tab" title="Default">
+									<span class="">Default</span> 
+								</a>
+							</li>
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link" data-bs-toggle="tab" href="#documents" role="tab" title="Documents">
+									<span class="">Documents</span> 
+								</a>
+							</li>
+							<li class="nav-item right-icon sm-hidden">
+								<div class="nav-link">
+									<button type="button" class="btn btn-sm btn-outline-secondary waves-effect waves-light me-2">Cancel</button>
+									<button type="submit" class="btn btn-sm btn-outline-secondary waves-effect waves-light">Save</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="page-content h-100" data-simplebar data-simplebar-auto-hide="false">
+
+						<!-- Tab panes -->
+						<div class="tab-content" id="tab-content">							
+							<div class="tab-pane active" id="details" role="tabpanel">	
+								<div class="row">
+									<div class="col-12">
+										<div class="card">
+											<div class="card-body">
+												<form>
+													<div class="row">
+														<div class="col-md-6">
+															<h4 class="card-title">Factuutadres</h4>
+														</div>
+														<div class="col-md-6 text-end">
+														</div>
+													</div>													
+													<div class="form-floating mb-3">
+														<input type="text" class="form-control" placeholder="Naam klant*" id="txt1" required>
+														<label for="txt1">Naam klant*</label>
+													</div>												
+													<div class="form-floating mb-3">
+														<input type="text" class="form-control" placeholder="Ter attentie van" id="txt2">
+														<label for="txt2">Ter attentie van</label>
+													</div>												
+													<div class="form-floating mb-3">
+														<input type="text" class="form-control" placeholder="Straat en huisnummer*" id="txt3" required>
+														<label for="txt3">Straat en huisnummer*</label>
+													</div>
+
+													<div class="row">														
+														<div class="col-lg-3">
+															<div class="form-floating mb-3">
+																<input type="text" class="form-control" placeholder="Postcode*" id="txt4" required>
+																<label for="txt4">Postcode*</label>
+															</div>
+														</div>
+														<div class="col-lg-4">
+															<div class="form-floating mb-3">
+																<input type="text" class="form-control" placeholder="Plaats*" id="txt5" required>
+																<label for="txt5">Plaats*</label>
+															</div>
+														</div>
+														<div class="col-lg-5">
+															<div class="form-floating mb-3">
+																<select id="txt6" class="form-control form-select" placeholder="Nederland">
+																	<option selected>Nederland</option>
+																	<option>...</option>
+																</select>
+																<label for="txt6">Land*</label>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-floating mb-3">
+														<textarea id="txt7" class="form-control" placeholder="Estra adresingormatie" rows="4"></textarea>
+														<label for="txt7">Estra adresingormatie</label>
+													</div>
+
+													<div>
+														<h4 class="card-title mb-3 mt-4"">Fectuur e-mail</h4>
+													</div>	
+
+													<div class="row">
+														
+														<div class="col-md-6">
+															<div class="form-floating mb-3">
+																<input type="email" class="form-control" id="txt8" placeholder="Geachte heer, mevrouw,">
+																<label for="txt8">Aanhef e-mail</label>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-floating mb-3">
+																<input type="email" class="form-control" placeholder="E-mailadres" id="txt9">
+																<label for="txt9">E-mailadres</label>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-floating mb-3">
+														<textarea id="txt10" class="form-control" placeholder="CC e-mailadressen (Komma gescheiden)" rows="4"></textarea>
+														<label for="txt10">CC e-mailadressen (Komma gescheiden)</label>
+													</div>
+													<div class="sm-show mt-4">
+														<button type="button" class="btn btn-outline-secondary waves-effect waves-light me-2">Cancel</button>
+														<button type="submit" class="btn btn-outline-secondary waves-effect waves-light">Save</button>
+													</div>
+												</form>
+											</div>
+											<!-- end card body -->
+										</div>
+										<!-- end card -->
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="address" role="tabpanel">
+								<p class="mb-0">
+									address, Etsy mixtape wayfarers, ethical wes anderson tofu before they
+									sold out mcsweeney's organic lomo retro fanny pack lo-fi
+									farm-to-table readymade. Messenger bag gentrify pitchfork
+									tattooed craft beer, iphone skateboard locavore carles etsy
+									salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+									Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+									mi whatever gluten-free.
+								</p>
+							</div>
+							<div class="tab-pane" id="logo" role="tabpanel">
+								<p class="mb-0">
+									logo, Etsy mixtape wayfarers, ethical wes anderson tofu before they
+									sold out mcsweeney's organic lomo retro fanny pack lo-fi
+									farm-to-table readymade. Messenger bag gentrify pitchfork
+									tattooed craft beer, iphone skateboard locavore carles etsy
+									salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+									Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+									mi whatever gluten-free.
+								</p>
+							</div>
+							<div class="tab-pane" id="default" role="tabpanel">
+								<p class="mb-0">
+									default, Etsy mixtape wayfarers, ethical wes anderson tofu before they
+									sold out mcsweeney's organic lomo retro fanny pack lo-fi
+									farm-to-table readymade. Messenger bag gentrify pitchfork
+									tattooed craft beer, iphone skateboard locavore carles etsy
+									salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+									Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+									mi whatever gluten-free.
+								</p>
+							</div>
+							<div class="tab-pane" id="documents" role="tabpanel">
+								<p class="mb-0">
+									documents, Etsy mixtape wayfarers, ethical wes anderson tofu before they
+									sold out mcsweeney's organic lomo retro fanny pack lo-fi
+									farm-to-table readymade. Messenger bag gentrify pitchfork
+									tattooed craft beer, iphone skateboard locavore carles etsy
+									salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+									Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+									mi whatever gluten-free.
+								</p>
+							</div>
+						</div>
+
+					</div> <!-- end slimscroll-menu--> 
+				</div>
+				<!-- end right content-->
+
+				<!-- Modal -->
+				<div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
+								<p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
+
+								<div class="table-responsive">
+									<table class="table align-middle table-nowrap">
+										<thead>
+											<tr>
+												<th scope="col">Product</th>
+												<th scope="col">Product Name</th>
+												<th scope="col">Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<div>
+														<img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
+													</div>
+												</th>
+												<td>
+													<div>
+														<h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
+														<p class="text-muted mb-0">$ 225 x 1</p>
+													</div>
+												</td>
+												<td>$ 255</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div>
+														<img src="assets/images/product/img-4.png" alt="" class="avatar-sm">
+													</div>
+												</th>
+												<td>
+													<div>
+														<h5 class="text-truncate font-size-14">Phone patterned cases</h5>
+														<p class="text-muted mb-0">$ 145 x 1</p>
+													</div>
+												</td>
+												<td>$ 145</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<h6 class="m-0 text-right">Sub Total:</h6>
+												</td>
+												<td>
+													$ 400
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<h6 class="m-0 text-right">Shipping:</h6>
+												</td>
+												<td>
+													Free
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<h6 class="m-0 text-right">Total:</h6>
+												</td>
+												<td>
+													$ 400
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end modal -->
+				
+				<footer class="footer">
+					<div class="container-fluid">
+						<div class="row">
+                            <div class="col-sm-6">
+                                Copywrite © <script>document.write(new Date().getFullYear())</script> Invoice Ninja.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    <!-- <img src="assets/images/footlg.png" alt="" height="15"> -->
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</footer>				
+
+				<!-- Loader -->
+				<div id="preloader">
+					<div id="status">
+						<div class="spinner-chase">
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>		
+
+        <!-- tui charts plugins -->
+        <script src="assets/libs/tui-chart/tui-chart-all.min.js"></script>
+
+        <!-- tui charts map -->
+        <script src="assets/libs/tui-chart/maps/usa.js"></script>
+
+        <!-- tui charts plugins -->
+        <script src="assets/js/pages/tui-charts.init.js"></script>
+		
+		<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+		<!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>   
+
+		<script>
+			jQuery(window).on("load", function(){ 
+
+				if ($(window).width() < 992) {
+					var menuobj = $("#top-menu-dasktop").html();
+					$("#top-menu-dasktop").remove();
+					$("#top-menu").prepend(menuobj);
+					var contentobj = $("#tab-content-dasktop").html();
+					$("#tab-content-dasktop").remove();
+					$("#tab-content").prepend(contentobj);
+
+				}
+			});
+
+			$(window).resize(function() {
+				if ($(window).width() < 992) {
+					location.reload();
+				}
+			});
+
+			$(document).ready(function(){
+				if ($(window).width() < 992) {
+					$(".menu a[href$='#details']").removeClass('active');
+					$(".tab-content #details").removeClass('active');
+					$(".menu a[href$='#overview']").addClass('active');
+					$(".tab-content #overview").addClass('active');
+					//$(".chart-large #column-charts").removeAttr('id');
+				} 
+				$(".select-year .increase").click(function(){
+					$(".select-year input").val(parseInt($(".select-year input").val()) + 1);
+				})
+				$(".select-year .decrease").click(function(){
+					$(".select-year input").val(parseInt($(".select-year input").val()) - 1);
+				})
+			});
+
+		</script>
+
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

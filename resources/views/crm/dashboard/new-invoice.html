@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        
+        <meta charset="utf-8" />
+        <title>Add Invoice | My-CRM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />   
+
+		<link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css">
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />		
+        <link href="assets/libs/tui-chart/tui-chart.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-topbar="light">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="30">
+                                </span>
+                            </a>
+
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+						<ul class="nav menu nav-pills me-3" role="tablist" id="top-menu-dasktop">
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link active" data-bs-toggle="tab" href="#overview" role="tab" title="Overview" aria-selected="false">
+									<span class="">Invoices</span> 
+								</a>
+							</li>
+						</ul>
+
+                        <!-- App Search-->
+                        <form class="app-search d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="bx bx-search-alt"></span>
+                            </div>
+                        </form>
+                    </div>
+					<div class="d-flex sm-show">
+						<a href="#"><span><img src="assets/images/edit.png" height="22"></span></a>
+					</div>
+                </div>
+            </header>
+
+			<!-- Left Sidebar Start -->
+			<div class="vertical-menu">
+
+				<div data-simplebar class="h-100">
+
+					<!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled" id="side-menu">
+
+                            <li>
+                                <a href="index.html" class="waves-effect">
+                                    <i class="bx bx-receipt"></i>
+                                    <span key="t-dashbard">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-align-left"></i>
+                                    <span key="t-leads">Leads</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="clients.html" class="waves-effect">
+                                    <i class="bx bxs-bank"></i>
+                                    <span key="t-pmethods">Clients</span>
+                                </a>
+                            </li>
+
+                            <li class="mm-active">
+                                <a href="invoices.html" class="waves-effect active">
+                                    <i class="bx bx-file"></i>
+                                    <span key="t-invoice">Invoices</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-download"></i>
+                                    <span key="t-estimate">Estimate</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-credit-card"></i>
+                                    <span key="t-credits">Credit Note</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-wallet-alt"></i>
+                                    <span key="t-payments">Payments</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="projects.html" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-project">Project</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="tasks.html" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-tasks">Tasks</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-calender">Calender</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-wplan">Weekly Plans</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-journals">My Daily Journals</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="settings.html" class="waves-effect">
+                                    <i class="bx bx-tv"></i>
+                                    <span key="t-settings">Settings</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+					<div class="social-links">
+						<div class="icons">
+							<a href="#" target="_blank"><img src="assets/images/facebook.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/twitter.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/github.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/email.png"></a>
+							<a href="#" target="_blank"><img src="assets/images/youtube.png"></a>
+						</div>	
+					</div>
+
+				</div>
+			</div>
+			<!-- Left Sidebar End -->
+
+			<!-- Start main Content here -->
+			<div class="main-content">
+				<!-- Start page-Content here -->
+				<div class="left-content">
+					<div class="page-content h-100" id="scroll-block" data-simplebar data-simplebar-auto-hide="false">
+						<div class="tab-content" id="tab-content-dasktop">
+							<div class="tab-pane active" id="overview" role="tabpanel">
+
+								<div class="row" id="details-block">
+									<div class="col-lg-12">
+										<div class="card">
+											<div class="bg-primary bg-soft clients-data-header">
+												<div class="row">
+													<div class="col-sm-3">
+														<div class="text-primary p-2 ps-4 title">
+															<h5 class="text-primary m-0">Invoice</h5>
+														</div>
+													</div>
+													<div class="col">	
+														<div class="filters invoice p-2 pe-4">
+															<div class="input-group select-year">
+																<label class="input-group-text decrease"><i class="bx bx-chevron-left"></i></label>
+																<input class="form-control form-control-sm" type="text" min="1990" max="2050" value="2020" id="year-filter" placeholder="Year">
+																<label class="input-group-text increase"><i class="bx bx-chevron-right"></i></label>
+															</div>
+															<div class="input-group select-filter">															
+																<select class="form-control form-select form-select-sm btn-filter">
+																  <option selected>Filter</option>
+																  <option value="1">One</option>
+																  <option value="2">Two</option>
+																  <option value="3">Three</option>
+																</select>
+																<label class="input-group-text"><i class="bx bx-slider"></i></label>
+															</div>
+															<div class="input-group select-sort">																
+																<select class="form-control form-select form-select-sm btn-sort">
+																  <option selected>Sorteer</option>
+																  <option value="1">One</option>
+																  <option value="2">Two</option>
+																  <option value="3">Three</option>
+																</select>
+																<label class="input-group-text"><i class="bx bx-sort-down"></i></label>
+															</div>															
+															<div class="input-group btn-download d-none">
+																<label class="input-group-text"><i class="bx bx-download"></i></label>
+																<button type="button" class="btn btn-sm btn-light waves-effect">Download</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row table-head">
+													<div class="col-6 p-2">									
+														<span class="">TOTAAL EXCLUSIEF BTW</span>
+														<span class="text-dark-bold">&euro; 3,143.15</span>
+													</div>
+													<div class="col-6 p-2">	
+														<span class="">TOTAAL INCLUSIEF BTW</span>
+														<span class="text-dark-bold">&euro; 3,803.22</span>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">													
+												<div class="row filter-head">
+													<div class="col c1">														
+														<input type="checkbox" id="checkall" class="" style="margin: .75rem; margin-right: 1.5rem;"></input>
+														<button class="btn btn-sm btn-secondary">Verstuur</button>
+														<button class="btn btn-sm btn-secondary">Herinner</button>
+														<button class="btn btn-sm btn-secondary">Verwijder</button>
+													</div>
+													<div class="col c2">
+														<a href="#" class="btn btn-sm btn-light waves-effect"><i class="bx bx-download"></i> Download</a>
+													</div>
+												</div>
+
+												<table id="checkboxes" class="table dt-responsive clients-data w-100">
+													<thead class="d-none">
+													<tr>
+														<th>checkbox</th>
+														<th>Name</th>
+														<th>Amount</th>
+													</tr>
+													</thead>
+				
+				
+													<tbody>
+													<tr>
+														<td>
+															<input type="checkbox" class="" value=""></input>
+														</td>
+														<td>
+															<span class="title red-dot">202105-007 | Business Plaza Nederland | Onderhoud en beheer BP4.0 voor 1.5 maand</span>
+															<span class="address">94 dagen te laat (Nog niet herinnerd | 17-05-2021)</span>
+														</td>
+														<td class="amount">
+															<span class="a1">&euro; 748.15</span>
+															<span class="a2">&euro; 157.11</span>
+															<span class="a3">&euro; 905.26 <i class="bx bx-up-arrow-alt"></i></span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox" class="" value=""></input>
+														</td>
+														<td>
+															<span class="title green-dot">202105-007 | Business Plaza Nederland | Onderhoud en beheer BP4.0 voor 1.5 maand</span>
+															<span class="address">94 dagen te laat (Nog niet herinnerd | 17-05-2021)</span>
+														</td>
+														<td class="amount">
+															<span class="a1">&euro; 748.15</span>
+															<span class="a2">&euro; 157.11</span>
+															<span class="a3">&euro; 905.26 <i class="bx bx-up-arrow-alt"></i></span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox" class="" value=""></input>
+														</td>
+														<td>
+															<span class="title green-dot">202105-007 | Business Plaza Nederland | Onderhoud en beheer BP4.0 voor 1.5 maand</span>
+															<span class="address">94 dagen te laat (Nog niet herinnerd | 17-05-2021)</span>
+														</td>
+														<td class="amount">
+															<span class="a1">&euro; 748.15</span>
+															<span class="a2">&euro; 157.11</span>
+															<span class="a3">&euro; 905.26 <i class="bx bx-up-arrow-alt"></i></span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox" class="" value=""></input>
+														</td>
+														<td>
+															<span class="title green-dot">202105-007 | Business Plaza Nederland | Onderhoud en beheer BP4.0 voor 1.5 maand</span>
+															<span class="address">94 dagen te laat (Nog niet herinnerd | 17-05-2021)</span>
+														</td>
+														<td class="amount">
+															<span class="a1">&euro; 748.15</span>
+															<span class="a2">&euro; 157.11</span>
+															<span class="a3">&euro; 905.26 <i class="bx bx-up-arrow-alt"></i></span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox" class="" value=""></input>
+														</td>
+														<td>
+															<span class="title green-dot">202105-007 | Business Plaza Nederland | Onderhoud en beheer BP4.0 voor 1.5 maand</span>
+															<span class="address">94 dagen te laat (Nog niet herinnerd | 17-05-2021)</span>
+														</td>
+														<td class="amount" style="min-width:105px;">
+															<span class="a1">&euro; 748.15</span>
+															<span class="a2">&euro; 157.11</span>
+															<span class="a3">&euro; 905.26 <i class="bx bx-up-arrow-alt"></i></span>
+														</td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end row -->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Page-content -->					
+
+				<!-- Start right Content here -->
+				<div class="right-content">					
+	
+					<!-- Nav tabs -->
+					<div class="scroll-nav">
+						<ul class="nav menu nav-pills" role="tablist" id="top-menu">
+							<li class="nav-item waves-effect waves-light">
+								<a class="nav-link active" data-bs-toggle="tab" href="#details" role="tab" title="Invoice">
+									<span class="">Details</span> 
+								</a>
+							</li>
+							<li class="nav-item sm-hidden right-icon">
+								<a class="nav-link" href="#">
+									<span class="d-block"><img src="assets/images/edit.png" height="22"></span>   
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="page-content h-100" data-simplebar data-simplebar-auto-hide="false">
+
+						<!-- Tab panes -->
+						<div class="tab-content" id="tab-content">
+							
+							<div class="tab-pane active" id="details" role="tabpanel">
+								
+								<div class="row">
+									<div class="col-12">
+										<div class="card">											
+											<div class="row page-header">
+												<div class="col-5 col-xxs-12">
+													<h5 class="card-title">Nieuwe factuur 202109-008</h5>
+												</div>
+												<div class="col-7 col-xxs-12 buttons">														
+													<button type="button" class="btn btn-sm btn-outline-info waves-effect me-1">Save and Send</button>
+													<button type="button" class="btn btn-sm btn-outline-info waves-effect me-1">Save</button>
+													<button type="button" class="btn btn-sm btn-outline-info waves-effect me-1">Cancel</button>
+													<a href="#"><i class="bx bx-x"></i></a>
+												</div>
+											</div>
+											<div class="card-body">
+												<form>
+													<div class="row mb-3">
+														<label for="txt1" class="form-label">Select Customer</label>
+														<div class="input-group">
+															<input type="text" list="browsers" class="form-control" id="txt1" placeholder="Zoek bestaande klant">
+															<button class="btn btn-primary" type="button">New Customer</button>
+															<datalist id="browsers">
+															  <option value="Edge">
+															  <option value="Firefox">
+															  <option value="Chrome">
+															  <option value="Opera">
+															  <option value="Safari">
+															</datalist>
+														</div>
+													</div>
+													<div style="height: 50px;"></div>
+													<div class="row mb-3">
+														<div class="col-9">
+															<p>Factuur-en leverdatum</p>
+														</div>
+														<div class="col-3 text-end">
+															<a class="btn btn-sm btn-outline-info waves-effect btn-label waves-light"><i class="bx bx-edit label-icon"></i> Edit</a>
+														</div>
+														<div class="col-12">
+															<table class="table detail-section">
+																<tbody>
+																	<tr>
+																		<th class="pb-0" width="110">Invoice date:</th>
+																		<td class="pb-2">18-09-2021</td>
+																	</tr>
+																	<tr>
+																		<th class="pt-0">Due date:</th>
+																		<td class="pt-0">18-10-2021</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>																								
+													<div class="row mb-3">
+														<div class="col-9">															
+															<div class="form-check form-radio-outline form-radio-success d-inline-block me-3">
+																<input class="form-check-input" type="radio" name="formRadio" id="formRadio1" checked="">
+																<label class="form-check-label" for="formRadio1"> Bedragen exclusief btw</label>
+															</div>														
+															<div class="form-check form-radio-outline form-radio-success d-inline-block">
+																<input class="form-check-input" type="radio" name="formRadio" id="formRadio2">
+																<label class="form-check-label" for="formRadio2"> Bedragen inclusief btw</label>
+															</div>
+														</div>
+														<div class="col-3 text-end">
+															<a class="btn btn-sm btn-outline-info waves-effect btn-label waves-light"><i class="bx bx-edit label-icon"></i> Edit</a>
+														</div>
+													</div>	
+													<div class="mb-3">
+														<div class="row mb-3 invoice-fields align-items-end text-end">
+														<div class="col-9">
+															<div class="row">
+																<div class="col-12">																	
+																	<div class="form-floating">
+																		<input type="text" class="form-control" id="txt2" placeholder="Omschrijving">
+																		<label for="txt2">Omschrijving</label>
+																	</div>
+																</div>
+																<div class="col-4">																	
+																	<div class="form-floating">
+																		<input type="text" class="form-control" id="txt3" placeholder="Aantal">
+																		<label for="txt3">Aantal</label>
+																	</div>
+																</div>
+																<div class="col-5">																	
+																	<div class="form-floating">
+																		<input type="text" class="form-control" id="txt4" placeholder="Bedrag excl. btw">
+																		<label for="txt4">Bedrag excl. btw</label>
+																	</div>
+																</div>
+																<div class="col-3">																														
+																	<div class="form-floating">
+																		<select id="txt5" class="form-control form-select" placeholder="Nederland">
+																			<option selected>21%</option>
+																			<option>.....</option>
+																		</select>
+																		<label for="txt5">Tax*</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-3">
+															<p>&euro; 0.00</p>
+														</div>
+														</div>														
+														<div class="row">
+															<div class="col-9 text-end"><span class="bold">Totaal incl. btw</span></div>
+															<div class="col-3 text-end"><span class="bold">&euro; 0.00</span></div>
+														</div>
+													</div>
+													<div class="row invoice-note">
+														<div class="col-9">
+															<p>Invoice note</p>
+														</div>
+														<div class="col-3 text-end">
+															<a class="btn btn-sm btn-outline-info waves-effect btn-label waves-light"><i class="bx bx-edit label-icon"></i> Edit</a>
+														</div>
+													</div>
+												</form>
+											</div>
+											<!-- end card body -->
+										</div>
+										<!-- end card -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div> <!-- end slimscroll-menu-->                                
+					<div class="row content-footer">
+						<div class="col-1">
+							<span class="double-dots"><i class="mdi mdi-apps"></i></span>
+						</div>
+						<div class="col-3"><a href="invoices.html">Go Back</a></div>
+						<div class="col-4"><a href="#">Client Portal</a></div>
+						<div class="col-4"><span><a href="settings.html">Settings</a></span></div>
+					</div>
+				</div>
+				<!-- end right content-->
+
+				<!-- Modal -->
+				<div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
+								<p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
+
+								<div class="table-responsive">
+									<table class="table align-middle table-nowrap">
+										<thead>
+											<tr>
+												<th scope="col">Product</th>
+												<th scope="col">Product Name</th>
+												<th scope="col">Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<div>
+														<img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
+													</div>
+												</th>
+												<td>
+													<div>
+														<h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
+														<p class="text-muted mb-0">$ 225 x 1</p>
+													</div>
+												</td>
+												<td>$ 255</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div>
+														<img src="assets/images/product/img-4.png" alt="" class="avatar-sm">
+													</div>
+												</th>
+												<td>
+													<div>
+														<h5 class="text-truncate font-size-14">Phone patterned cases</h5>
+														<p class="text-muted mb-0">$ 145 x 1</p>
+													</div>
+												</td>
+												<td>$ 145</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<h6 class="m-0 text-right">Sub Total:</h6>
+												</td>
+												<td>
+													$ 400
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<h6 class="m-0 text-right">Shipping:</h6>
+												</td>
+												<td>
+													Free
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<h6 class="m-0 text-right">Total:</h6>
+												</td>
+												<td>
+													$ 400
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end modal -->
+				
+				<footer class="footer">
+					<div class="container-fluid">
+						<div class="row">
+                            <div class="col-sm-6">
+                                Copywrite © <script>document.write(new Date().getFullYear())</script> Invoice Ninja.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    <!-- <img src="assets/images/footlg.png" alt="" height="15"> -->
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</footer>				
+
+				<!-- Loader -->
+				<div id="preloader">
+					<div id="status">
+						<div class="spinner-chase">
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+							<div class="chase-dot"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>		
+
+        <!-- tui charts plugins -->
+        <script src="assets/libs/tui-chart/tui-chart-all.min.js"></script>
+
+        <!-- tui charts map -->
+        <script src="assets/libs/tui-chart/maps/usa.js"></script>
+
+        <!-- tui charts plugins -->
+        <script src="assets/js/pages/tui-charts.init.js"></script>
+		
+		<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+		<!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>   
+
+		<script>
+			jQuery(window).on("load", function(){ 
+
+				if ($(window).width() < 992) {
+					var menuobj = $("#top-menu-dasktop").html();
+					$("#top-menu-dasktop").remove();
+					$("#top-menu").prepend(menuobj);
+					var contentobj = $("#tab-content-dasktop").html();
+					$("#tab-content-dasktop").remove();
+					$("#tab-content").prepend(contentobj);
+
+				}
+			});
+
+			$(window).resize(function() {
+				if ($(window).width() < 992) {
+					location.reload();
+				}
+			});
+
+			$(document).ready(function(){
+				if ($(window).width() < 992) {
+					$(".menu a[href$='#details']").addClass('active');
+					$(".tab-content #details").addClass('active');
+					$(".menu a[href$='#overview']").removeClass('active');
+					$(".tab-content #overview").removeClass('active');
+					//$(".chart-large #column-charts").removeAttr('id');
+				} 
+				$(".select-year .increase").click(function(){
+					$(".select-year input").val(parseInt($(".select-year input").val()) + 1);
+				});
+				$(".select-year .decrease").click(function(){
+					$(".select-year input").val(parseInt($(".select-year input").val()) - 1);
+				});
+				$('#checkall').click(function() {
+					var checked = $(this).prop('checked');
+					$('#checkboxes').find('input:checkbox').prop('checked', checked);
+				});
+			});
+
+		</script>
+
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
